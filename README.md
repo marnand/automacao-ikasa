@@ -60,3 +60,17 @@ docker-compose down
 # Remover volumes (cuidado: apaga dados!)
 docker-compose down -v
 ```
+
+## Caso esqueça a senha utilize os comandos abaixao para resetar
+
+```bash
+# Reset no Node.js
+n8n user-management:reset
+
+# Reset no Docker (via Portainer)
+n8n user-management:reset
+
+# Reset no Docker Puro
+docker exec -it <nome_do_container> n8n user-management:reset
+docker restart <nome_do_container>
+```
